@@ -63,3 +63,28 @@
     <script src="portainer.js"></script>
 </body>
 </html>
+
+<?php     
+    
+        $url = "https://admin.web.thomasgllt.fr/api/stacks";
+
+        $curl = curl_init($url);
+
+        $header = array(
+            'X-API-KEY: ptr_MaYlWgiOW/5ebmCVYV4x6Mdv92DOe0jhx62AEoph+bA='
+        );
+
+        curl_setopt($curl, CURLOPT_HTTPHEADER, $header);
+
+        curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+
+        $data = curl_exec($curl);
+
+        curl_close($curl);
+
+        $data = json_decode($data, true);
+
+        echo "<pre>";
+        print_r($data);
+        echo "</pre>";
+        ?>

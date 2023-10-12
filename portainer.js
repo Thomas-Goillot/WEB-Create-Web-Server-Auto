@@ -1,14 +1,11 @@
-const apiUrl = "https://admin.web.thomasgllt.fr/api/auth";
+const apiUrl = "https://admin.web.thomasgllt.fr/api/stacks";
 
 fetch(apiUrl, {
     method: 'POST',
     headers: {
-        'Content-Type': 'application/json'
+        'X-API-KEY': 'ptr_MaYlWgiOW/5ebmCVYV4x6Mdv92DOe0jhx62AEoph+bA='
     },
-    body: JSON.stringify({
-        username: 'admin',
-        password: 'TH44go28&*+adminweb'
-    })
+
 })
 .then(response => response.json())
 .then(data => console.log(data))
